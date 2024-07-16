@@ -29,12 +29,22 @@
 
 (define word-char-list #("a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"))
 
-(define (misc-random-word len [lst word-char-list])
+#;(define (misc-random-word-old len [lst word-char-list])
   (define result "")
-  (for ([i len])
+  (for ([_ len])
     (set! result (string-append result (misc-random-element lst)))
     )
   result
+  )
+
+(define (misc-random-word len [lst word-char-list])
+  (with-output-to-string
+    (λ ()
+      (for ([_ len])
+        (display (misc-random-element lst))
+        )
+      )
+    )
   )
 
 (provide
