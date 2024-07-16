@@ -6,7 +6,7 @@
 
 @defmodule[misc]
 
-This basically provides @racket[misc-counter].
+This basically provides @racket[misc-counter], and @racket[misc-random-element].
 
 @table-of-contents[]
 
@@ -20,4 +20,7 @@ This basically provides @racket[misc-counter].
 (misc-counter) ;; 1
 (misc-counter) ;; 2
 (misc-counter) ;; 3
+(misc-random-element '(apple carrot tomato cucumber))
+(misc-random-element '(apple carrot tomato cucumber))
+(misc-random-element '(apple carrot tomato cucumber))
 }|
