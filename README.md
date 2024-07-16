@@ -1,11 +1,12 @@
 # Miscellaneous Functions for Racket
 
-JavaCommons Technologies
+by JavaCommons Technologies
 <[javacommons@gmail.com](mailto:javacommons@gmail.com)>
 
- (require misc)
+ (require misc) package: [misc](https://pkgs.racket-lang.org/package/misc)
 
-This basically provides `misc-counter`, and `misc-random-element`.
+This basically provides `misc-counter`, `misc-random-element`, and
+`misc-random-word`.
 
     1 Example and usage
 
@@ -22,4 +23,9 @@ This basically provides `misc-counter`, and `misc-random-element`.
 (misc-random-element '(apple carrot tomato cucumber))
 (misc-random-element '(apple carrot tomato cucumber))
 (misc-random-element '(apple carrot tomato cucumber))
+                                                     
+(misc-random-word 10)                                
+(misc-random-word 10 #("x" "y" "z"))                 
+(misc-random-word 10 #("x" "y" "z"))                 
+(misc-random-word 10 #("x" "y" "z"))                 
 ```
