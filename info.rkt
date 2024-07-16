@@ -12,6 +12,7 @@
 (define release-notes '((p "First release")))
 (define deps '("compatibility-lib"
                "base"
+               "reprovide-lang-lib"
                ))
 (define build-deps '("racket-doc"
                      "scribble-lib"))
