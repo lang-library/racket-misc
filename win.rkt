@@ -10,7 +10,8 @@
   )
 
 (define (win-userprofile)
-  (getenv-with-forward-slash "USERPROFILE")
+  #;(getenv-with-forward-slash "USERPROFILE")
+  (getenv "USERPROFILE")
   )
 
 (provide

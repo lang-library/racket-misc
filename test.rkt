@@ -2,7 +2,7 @@
 #lang racket
 (require "./main.rkt")
 #;(require racket/pretty)
-#;(require access)
+(require access)
 (require pprint-all)
 
 (misc-counter)
@@ -22,3 +22,7 @@
 (dump (getenv-with-forward-slash "xUSERPROFILE"))
 
 (dump (win-userprofile))
+(dump (! (win-userprofile)
+         (build-path ! "abc")
+         )
+      )
