@@ -29,3 +29,9 @@
 
 #;(msgbox "メッセージ©" "タイトル©")
 #;(msgbox "メッセージ©")
+
+(dump (between 1.0 1.2))
+(dump (between 10 2))
+
+(sleep-between 0.1 0.2)
+(sleep-between 0.1 0.2 1000)
