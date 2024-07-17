@@ -25,10 +25,11 @@
 ;#(MessageBoxW #f "メッセージ©" "タイトル©" 0)
 
 (define (msgbox msg [title "Message"])
+  (set! msg (format "~a" msg))
+  (set! title (format "~a" title))
+  (printf "[msgbox] ~a: ~a\n" title msg)
   (cond
     [(eq? 'windows (system-type))
-     (set! msg (format "~a" msg))
-     (set! title (format "~a" title))
      #;(printf "[msgbox] ~a: ~a\n" title msg)
      (MessageBoxW #f msg title 0)
      (void)
@@ -37,7 +38,6 @@
        (printf "[msgbox] ~a: ~a\n" title msg)
        ]
     )
-  (printf "[msgbox] ~a: ~a\n" title msg)
   (void)
   )
 
