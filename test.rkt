@@ -35,3 +35,14 @@
 
 (sleep-between 0.1 0.2)
 (sleep-between 0.1 0.2 1000)
+
+(define n 5)
+(while (> n 0)
+  (dump n)
+  (set! n (- n 1))
+  )
+(define m 5)
+(until (< m 1)
+  (dump m)
+  (set! m (- m 1))
+  )
