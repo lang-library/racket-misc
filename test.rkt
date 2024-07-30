@@ -26,9 +26,6 @@
          )
       )
 
-#;(msgbox "メッセージ©" "タイトル©")
-#;(msgbox "メッセージ©")
-
 (dump (between 1.0 1.2))
 (dump (between 10 2))
 
