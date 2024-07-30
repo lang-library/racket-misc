@@ -1,5 +1,4 @@
 #lang racket
-#;(require pprint-all)
 
 (define-syntax-rule (&swap x y)
   (let ([tmp x])
@@ -24,9 +23,6 @@
     (else result)
     )
   )
-
-#;(dump (between 1.0 1.2))
-#;(dump (between 10 2))
 
 (define (sleep-between n1 n2 [resolution 100])
   (define n (between n1 n2 resolution))

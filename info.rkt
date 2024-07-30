@@ -15,7 +15,7 @@
                "access"
                "base"
                "compatibility-lib"
-               "pprint-all"
+               "output"
                ))
 (define build-deps '("racket-doc"
                      "scribble-lib"))

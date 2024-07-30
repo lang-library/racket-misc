@@ -1,9 +1,8 @@
 #! /usr/bin/env racket
 #lang racket
 (require "./main.rkt")
-#;(require racket/pretty)
 (require access)
-(require pprint-all)
+(require output)
 
 (misc-counter)
 (misc-counter)
