@@ -16,6 +16,7 @@
                "base"
                "compatibility-lib"
                "output"
+               "uuid"
                ))
 (define build-deps '("racket-doc"
                      "scribble-lib"))

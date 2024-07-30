@@ -1,13 +1,13 @@
 #lang racket
 (require access)
 
-(define (strings-dos2unix lines)
+(define (::strings:dos2unix lines)
   (! lines
      (string-replace ! "\r\n" "\n")
      )
   )
 
-(define (strings-remove-last-newline s)
+(define (::strings:remove-last-newline s)
   (cond
     ((string-suffix? s "\r\n")
      (substring s 0 (- (string-length s) 2))
@@ -22,10 +22,9 @@
     )
   )
 
-(define (strings-prefix-lines prefix lines)
+(define (::strings:prefix-lines prefix lines)
   (! lines
-     #;(string-replace ! "\r\n" "\n")
-     (strings-dos2unix !)
+     (::strings:dos2unix !)
      (string-replace ! "\r" "\n")
      (string-split ! "\n")
      (map (lambda (x) (format "~a~a" prefix x)) !)
@@ -35,7 +34,7 @@
   )
 
 (provide
- strings-dos2unix
- strings-prefix-lines
- strings-remove-last-newline
+ ::strings:dos2unix
+ ::strings:prefix-lines
+ ::strings:remove-last-newline
  )
